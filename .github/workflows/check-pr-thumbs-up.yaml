@@ -3,7 +3,7 @@ name: Check PR Thumbs Up and Manage Labels
 on:
   push:
     branches:
-      - main
+      - test_pr_approval_workflows
 
 jobs:
   check-pr-thumbs-up:
