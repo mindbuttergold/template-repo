@@ -15,6 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Get Open PR numbers
+        id: get-open-prs
         run: |
           OPEN_PR_NUMS=$(gh api "/repos/${GITHUB_REPOSITORY}/pulls?state=open" -q '.[].number' | tr '\n' ' ' | sed 's/[[:space:]]*$//')
 
@@ -25,8 +26,10 @@ jobs:
 
           echo "The following PR numbers are open: $OPEN_PR_NUMS"
           echo "OPEN_PR_NUMS=$OPEN_PR_NUMS" >> $GITHUB_ENV
+          echo "open_prs=true" >> $GITHUB_OUTPUT
 
       - name: Get PR Thumbs Up Counts and Manage Labels
+        if: steps.get-open-prs.outputs.open_prs == 'true'
         run: |
           OPEN_PR_NUMS="${{ env.OPEN_PR_NUMS }}"
           eval "set -- $OPEN_PR_NUMS"
