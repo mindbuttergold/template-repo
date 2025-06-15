@@ -1,16 +1,19 @@
 name: OSSF Scorecard
 on:
-  branch_protection_rule:
   schedule:
     - cron: '0 5 * * 1' # Every Sunday at 10pm MST (5:00 UTC)
   push:
     branches: [ "main" ]
 
+permissions: read-all
+
 jobs:
   analysis:
     name: Scorecard analysis
     runs-on: ubuntu-latest
-    if: github.event.repository.default_branch == github.ref_name || github.event_name == 'pull_request'
+    permissions:
+      security-events: write
+      id-token: write
 
     steps:
       - name: "Checkout code"
