@@ -1,8 +1,8 @@
 # template-repo
 
-[![CodeQL](https://github.com/mindbuttergold/template-repo/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/mindbuttergold/template-repo/actions/workflows/github-code-scanning/codeql) [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/mindbuttergold/template-repo/badge)](https://scorecard.dev/viewer/?uri=github.com/mindbuttergold/template-repo)
+[![CodeQL](https://github.com/mindbuttergold/template-repo/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/mindbuttergold/template-repo/actions/workflows/github-code-scanning/codeql) [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/mindbuttergold/template-repo/badge)](https://scorecard.dev/viewer/?uri=github.com/mindbuttergold/template-repo) [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/10740/badge)](https://www.bestpractices.dev/projects/10740)
 
-Template repo with foundational config applicable across all setups
+Template repo with foundational config and workflows applicable across all repository setups
 
 ## Included Components
 
@@ -25,7 +25,6 @@ This template repository provides the following components:
 
 ## Usage
 
-Admin / maintainers of the mindbuttergold organization can use this template to create a new repository.
-The new repository will contain all of the files in this repository.
+Admin / maintainers of the mindbuttergold organization can use this template to create a new repository. The new repository will contain all of the files in this repository.
 
-The only repo-specific changes that need to be made for the new repo are to this README.
+The only repo-specific changes that need to be made for the new repo are to this README. The badge URLs must be updated, and the openssf best practices self-certification process must be re-conducted for each repo.
