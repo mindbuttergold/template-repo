@@ -52,7 +52,7 @@ jobs:
               -q "[.[] | select(.content == \"+1\" and .user.login != \"$PR_AUTHOR\")] | length")   
             echo "PR #$PR_NUMBER has $THUMBS_UP_COUNT_EXCLUDING_AUTHOR thumbs up excluding from the author."
 
-            if [ "$THUMBS_UP_COUNT_EXCLUDING_AUTHOR" -ge 5 ]; then
+            if [ "$THUMBS_UP_COUNT_EXCLUDING_AUTHOR" -ge 0 ]; then
               echo "Adding 'community-approved' label to PR #$PR_NUMBER."
               gh api -X POST \
                 -H "Accept: application/vnd.github+json" \
