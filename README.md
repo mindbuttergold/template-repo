@@ -10,7 +10,9 @@ This template repository provides the following components:
 - README.md
 - Minimal .gitignore
 - MIT OSS License
-- CODEOWNERS file
+- CODEOWNERS
+- renovate.json
+  - Configuration for automated dependency management via Renovate
 - Semantic Release config file and Github Actions workflow
   - Automatically handles repository releases based on Conventional Commit standards
 - PR title validation Github Actions workflow
