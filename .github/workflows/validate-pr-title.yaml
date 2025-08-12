@@ -1,5 +1,4 @@
 name: "Validate PR Title"
-
 on:
   pull_request_target:
     types:
@@ -8,15 +7,9 @@ on:
       - edited
       - reopened
 
-permissions:
-  contents: read
-
 jobs:
   validate_pr_title:
-    runs-on: ubuntu-latest
     permissions:
       pull-requests: read
-    steps:
-      - uses: amannn/action-semantic-pull-request@v5
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    uses: mindbuttergold/github-actions-reusable-workflows/.github/workflows/validate-pr-title.yaml@convert_reusable_workflows
+    secrets: inherit

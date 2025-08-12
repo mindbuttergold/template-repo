@@ -8,10 +8,9 @@ on:
       - labeled
       - unlabeled
 
-permissions:
-  contents: read
-
 jobs:
   check-community-approval:
+    permissions:
+      contents: read
     uses: mindbuttergold/github-actions-reusable-workflows/.github/workflows/check-community-approval.yaml@convert_reusable_workflows
     secrets: inherit
