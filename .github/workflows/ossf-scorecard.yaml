@@ -1,16 +1,9 @@
 name: OSSF Scorecard
 on:
-  pull_request:
-    types:
-      - opened
-      - synchronize
-      - reopened
-      - labeled
-      - unlabeled
-  # schedule:
-  #   - cron: '0 5 * * 1' # Every Sunday at 10pm MST (5:00 UTC)
-  # push:
-  #   branches: [ "main" ]
+  schedule:
+    - cron: '0 5 * * 1' # Every Sunday at 10pm MST (5:00 UTC)
+  push:
+    branches: [ "main" ]
 
 jobs:
   analysis:
