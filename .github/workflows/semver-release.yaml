@@ -1,15 +1,17 @@
-name: Semver Release
+name: semver-release
 on:
   push:
     branches:
       - main
+permissions: read-all
 
 jobs:
-  release:
+  semver-release:
+    name: semver-release
     permissions:
       contents: write
       issues: write
       pull-requests: write
       id-token: write
-    uses: mindbuttergold/github-actions-reusable-workflows/.github/workflows/semver-release.yaml@convert_reusable_workflows
+    uses: mindbuttergold/github-actions-reusable-workflows/.github/workflows/semver-release.yaml@v1.0.0
     secrets: inherit

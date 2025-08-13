@@ -1,4 +1,4 @@
-name: Check Community Approval
+name: check-community-approval
 on:
   pull_request:
     types:
@@ -7,10 +7,10 @@ on:
       - reopened
       - labeled
       - unlabeled
+permissions: read-all
 
 jobs:
   check-community-approval:
-    permissions:
-      contents: read
-    uses: mindbuttergold/github-actions-reusable-workflows/.github/workflows/check-community-approval.yaml@convert_reusable_workflows
+    name: check-community-approval
+    uses: mindbuttergold/github-actions-reusable-workflows/.github/workflows/check-community-approval.yaml@v1.0.0
     secrets: inherit

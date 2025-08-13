@@ -1,4 +1,4 @@
-name: "Validate PR Title"
+name: validate-pr-title
 on:
   pull_request_target:
     types:
@@ -6,10 +6,12 @@ on:
       - synchronize
       - edited
       - reopened
+permissions: read-all
 
 jobs:
-  validate_pr_title:
+  validate-pr-title:
+    name: validate-pr-title
     permissions:
       pull-requests: read
-    uses: mindbuttergold/github-actions-reusable-workflows/.github/workflows/validate-pr-title.yaml@convert_reusable_workflows
+    uses: mindbuttergold/github-actions-reusable-workflows/.github/workflows/validate-pr-title.yaml@v1.0.0
     secrets: inherit
