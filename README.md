@@ -17,13 +17,6 @@ This template repository provides the following components:
   - Automatically handles repository releases based on Conventional Commit standards
 - PR title validation Github Actions workflow
   - Ensures PR title complies with Conventional Commit standards for use with squash merging / semantic release automation
-- Custom PR thumbs up check Github Actions workflow
-  - Checks all open PRs in the repo for thumbs up reactions from at least 5 community members, excluding the PR author
-  - If 5+ thumbs up on PR, automatically adds "community-approved" label to PR
-  - If "community-approved" label was previously added, but thumbs up reduced to below 5, it removes the label
-- Custom community approval label check
-  - Checks if the "community-approved" label is present on the PR
-  - Serves as a required check for PR mergeability
 
 ## Usage
 
